@@ -341,9 +341,7 @@ $$
 
 #### Bellman Optimality Equation
 
-$$
-V^*(s) = \max_a \sum_{s', r} p(s', r|s, a) [r + \gamma V^*(s')]
-$$
+![equation](https://latex.codecogs.com/gif.latex?V^*(s)&space;=&space;\max_a&space;\sum_{s',&space;r}&space;p(s',&space;r|s,&space;a)&space;[r&space;&plus;&space;\gamma&space;V^*(s')])
 
 ### Code Example
 
@@ -608,9 +606,7 @@ To address the challenge of large state-action spaces, DQN introduces a deep neu
 
 The Q-network is trained by minimizing the Temporal Difference (TD) error, based on the following loss function:
 
-$$
-L(\theta) = \mathbb{E}_{s, a, r, s'} \left[ \left( r + \gamma \max_{a'} Q(s', a'; \theta^-) - Q(s, a; \theta) \right)^2 \right]
-$$
+![equation](https://latex.codecogs.com/gif.latex?L(\theta)&space;=&space;\mathbb{E}_{s,&space;a,&space;r,&space;s'}&space;\left[&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a';&space;\theta^-)&space;-&space;Q(s,&space;a;&space;\theta)&space;\right)^2&space;\right])
 
 - **Experience Replay**: During interactions with the environment, the agent stores observed transitions ($s, a, r, s'$) in a replay memory buffer. An advantage of this approach is that samples are independent and identically distributed, mitigating issues from **correlated data**.
 
